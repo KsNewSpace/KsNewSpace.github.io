@@ -125,13 +125,29 @@ a, a:link, a:visited {
     padding-left:.3rem;
     padding-right:.3rem;
     border-radius: .5rem;
-    border-bottom: .15rem solid var(--white);
+    border-bottom: .15rem solid var(--white-a);
     text-decoration: none;
+}
+
+a#red, a:link#red, a:visited#red {
+    background-color: var(--dred);
+}
+
+a#blue, a:link#blue, a:visited#blue {
+    background-color: var(--dblue);
 }
 
 a:hover {
     background-color: var(--dgrey-a);
     border-bottom: .15rem solid var(--white);
+}
+
+a#red:hover {
+    background-color: var(--dred-a);
+}
+
+a#blue:hover {
+    background-color: var(--dblue-a);
 }
 
 a#nobg, a:link#nobg, a:visited#nobg {
