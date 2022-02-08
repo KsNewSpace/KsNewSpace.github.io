@@ -12,6 +12,9 @@
         --min-item-width: 30rem;
         --item-padding: .5rem;
         --item-margin: .5rem;
+        --item-margin-a: .5rem;
+        --item-margin-b: .5rem;
+        --item-margin-c: .5rem;
         --border-radius: 1rem;
 
         --post-transform: skew(-1deg, 1deg);
@@ -29,7 +32,10 @@
         --max-item-width: 100%;
         --min-item-width: 100%;
         --item-padding: 0rem;
-        --item-margin: 0rem 0rem 2rem 0rem;
+        --item-margin:  0rem 0rem 2rem 0rem;
+        --item-margin-a: 0rem 0rem 0rem 0rem;
+        --item-margin-b: .5rem 0rem 0rem 0rem;
+        --item-margin-c: .5rem 0rem 2rem 0rem;
         --border-radius: 1rem;
 
         --post-transform: skew(-0deg, 1deg);
@@ -64,14 +70,14 @@
 
     --font-main: rgb(250,250,250);
 
-    --global-background: rgb(20,20,20);
+    --global-background: rgb(15,15,15);
     --header-frame: var(--global-background);
     --header-item-frame: var(--global-background);
     --content-frame: var(--global-background);
     --post-frame: rgb(35,35,35);
     --footer-frame: var(--global-background);
 
-    --border-top: 0.4rem;
+    --border-top: 0.5rem;
     --border-bot: 0.2rem;
 }
 
@@ -130,11 +136,11 @@ a, a:link, a:visited {
 }
 
 a#red, a:link#red, a:visited#red {
-    background-color: var(--dred);
+    background-color: var(--red-a);
 }
 
 a#blue, a:link#blue, a:visited#blue {
-    background-color: var(--dblue);
+    background-color: var(--blue-a);
 }
 
 a:hover {
@@ -143,11 +149,11 @@ a:hover {
 }
 
 a#red:hover {
-    background-color: var(--dred-a);
+    background-color: var(--dred);
 }
 
 a#blue:hover {
-    background-color: var(--dblue-a);
+    background-color: var(--dblue);
 }
 
 a#nobg, a:link#nobg, a:visited#nobg {
@@ -229,7 +235,7 @@ div#head-item {
 }
 
 footer {
-    display: flex;
+    display: inline-flex;
     justify-content: center;
     background-color: var(--footer-frame);
     max-width: var(--max-site-width);
@@ -244,46 +250,60 @@ footer {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    align-items: flex-end;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
     background-color: var(--content-frame);
     max-width: var(--max-site-width);
     min-width: var(--min-site-width);
     padding: var(--main-padding);
-    justify-content: center;
 }
 
 .content-item {
-    /*flex: auto auto auto;*/
     margin: var(--item-margin);
     padding: var(--item-padding);
     background-color: var(--post-frame);
     max-width: var(--max-item-width);
     min-width: var(--min-item-width);
-    border-top: var(--border-top) solid var(--white);
-    border-bottom: var(--border-bot) solid var(--white);
+    border-top: var(--border-top) solid var(--grey);
+    border-bottom: var(--border-bot) solid var(--grey-a);
     border-radius: var(--border-radius);
+    transform: var(--post-transform);
+}
+
+.content-item-a {
+    margin: var(--item-margin-a);
+    padding: var(--item-padding);
+    background-color: var(--post-frame);
+    max-width: var(--max-item-width);
+    min-width: var(--min-item-width);
+    border-top: var(--border-top) solid var(--grey);
+    border-radius: var(--border-radius) var(--border-radius) 0 0;
+    transform: var(--post-transform);
+}
+
+.content-item-b {
+    margin: var(--item-margin-b);
+    padding: var(--item-padding);
+    background-color: var(--post-frame);
+    max-width: var(--max-item-width);
+    min-width: var(--min-item-width);
+    transform: var(--post-transform);
+}
+
+.content-item-c {
+    margin: var(--item-margin-c);
+    padding: var(--item-padding);
+    background-color: var(--post-frame);
+    max-width: var(--max-item-width);
+    min-width: var(--min-item-width);
+    border-bottom: var(--border-bot) solid var(--grey-a);
+    border-radius: 0 0 var(--border-radius) var(--border-radius);
     transform: var(--post-transform);
 }
 
 @keyframes example {
     
-}
-
-#you.content-item {
-    border-top: var(--border-top) solid var(--red);
-    border-bottom: var(--border-bot) solid var(--red);
-}
-#pat.content-item {
-    border-top: var(--border-top) solid var(--orange);
-    border-bottom: var(--border-bot) solid var(--orange);
-}
-#pay.content-item {
-    border-top: var(--border-top) solid var(--blue);
-    border-bottom: var(--border-bot) solid var(--blue);
-}
-#nda.content-item {
-    border-top: var(--border-top) solid var(--green);
-    border-bottom: var(--border-bot) solid var(--green);
 }
 
 .content-img {
