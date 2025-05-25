@@ -1,5 +1,7 @@
 ### Just a skew little Website meant to teach me some HTML/CSS/JS
 
+Check it out: [https://info.KsNewSpace.shop](https://info.ksnewspace.shop)
+
 I'm not a professional so if you are looking for best practices - it ain't here. 
 
 > ### My Social Media
